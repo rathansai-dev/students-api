@@ -11,6 +11,10 @@ students = [
 def root():
     return {"message": "Student API"}
 
+@app.get("/health")
+def health():
+    return {"status": "UP"}
+
 @app.get("/students")
 def get_students():
     return students
